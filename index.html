@@ -1,286 +1,433 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ксения Шлепотина — SMM-специалист</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper:#F5F5F0;
-    --card:#FFFFFF;
-    --ink:#16181D;
-    --ink-muted:#6B6D66;
-    --line:#E4E3DC;
-    --accent:#2F5CFF;
-    --accent-wash:#EAF0FF;
-    --coral:#FF6B4A;
-    --coral-wash:#FFEEE8;
-    --teal:#159E86;
-    --teal-wash:#E4F5F1;
-    --marker:#D8FF3E;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Manrope',sans-serif;
-    line-height:1.5;
-  }
-  .wrap{
-    max-width:920px;
-    margin:0 auto;
-    padding:48px 20px 64px;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ксения Шлепотина — SMM-специалист</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#F5F5F0;
+      --card:#FFFFFF;
+      --ink:#16181D;
+      --ink-muted:#6B6D66;
+      --line:#E4E3DC;
+      --accent:#2F5CFF;
+      --accent-wash:#EAF0FF;
+      --coral:#FF6B4A;
+      --coral-wash:#FFEEE8;
+      --teal:#159E86;
+      --teal-wash:#E4F5F1;
+      --marker:#D8FF3E;
+    }
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;}
+    body{
+      background:var(--paper);
+      color:var(--ink);
+      font-family:'Manrope',sans-serif;
+      line-height:1.5;
+    }
+    .wrap{
+      max-width:920px;
+      margin:0 auto;
+      padding:48px 20px 64px;
+    }
 
-  /* ---------- HERO ---------- */
-  .hero{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:20px;
-    padding:32px;
-    margin-bottom:36px;
-  }
-  .hero-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-    flex-wrap:wrap;
-    margin-bottom:20px;
-  }
-  .id{
-    display:flex;
-    align-items:center;
-    gap:16px;
-  }
-  .avatar{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:var(--accent);
-    color:#fff;
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:700;
-    font-size:19px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-  }
-  h1{
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:700;
-    font-size:26px;
-    margin:0 0 2px;
-    line-height:1.15;
-  }
-  h1 span{
-    background:linear-gradient(to top, var(--marker) 32%, transparent 32%);
-    padding:0 2px;
-  }
-  .role{
-    font-size:14px;
-    color:var(--ink-muted);
-    margin:0;
-    font-weight:500;
-  }
-  .status{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    font-size:12px;
-    color:var(--ink-muted);
-  }
-  .status-dot{
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:#3FC96B;
-    flex-shrink:0;
-  }
-  .bio{
-    font-size:15px;
-    color:var(--ink);
-    margin:0 0 22px;
-    max-width:56ch;
-  }
+    /* ---------- HERO ---------- */
+    .hero{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:32px;
+      margin-bottom:36px;
+    }
+    .hero-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:20px;
+    }
+    .id{
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+    .avatar{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      flex-shrink:0;
+      background:var(--accent);
+    }
+    h1{
+      font-family:'Space Grotesk',sans-serif;
+      font-weight:700;
+      font-size:26px;
+      margin:0 0 2px;
+      line-height:1.15;
+    }
+    h1 span{
+      background:linear-gradient(to top, var(--marker) 32%, transparent 32%);
+      padding:0 2px;
+    }
+    .role{
+      font-size:14px;
+      color:var(--ink-muted);
+      margin:0;
+      font-weight:500;
+    }
+    .status{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      font-size:12px;
+      color:var(--ink-muted);
+    }
+    .status-dot{
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#3FC96B;
+      flex-shrink:0;
+    }
+    .bio{
+      font-size:15px;
+      color:var(--ink);
+      margin:0 0 22px;
+      max-width:56ch;
+    }
 
-  .socials{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-  }
-  .socials a{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    text-decoration:none;
-    color:var(--ink);
-    font-size:13px;
-    font-weight:500;
-    padding:9px 14px;
-    border:1px solid var(--line);
-    border-radius:999px;
-    transition:border-color .15s ease, background .15s ease, transform .15s ease;
-  }
-  .socials a:hover{
-    border-color:var(--accent);
-    background:var(--accent-wash);
-    transform:translateY(-1px);
-  }
-  .socials a.primary{
-    background:var(--accent);
-    border-color:var(--accent);
-    color:#fff;
-  }
-  .socials a.primary:hover{background:#2549D6;}
-  .socials svg{width:15px;height:15px;flex-shrink:0;}
+    .socials{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .socials a{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      text-decoration:none;
+      color:var(--ink);
+      font-size:13px;
+      font-weight:500;
+      padding:9px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      transition:border-color .15s ease, background .15s ease, transform .15s ease;
+    }
+    .socials a:hover{
+      border-color:var(--accent);
+      background:var(--accent-wash);
+      transform:translateY(-1px);
+    }
+    .socials a.primary{
+      background:var(--accent);
+      border-color:var(--accent);
+      color:#fff;
+    }
+    .socials a.primary:hover{background:#2549D6;}
+    .socials svg{width:15px;height:15px;flex-shrink:0;}
 
-  /* ---------- PORTFOLIO ---------- */
-  .section-head{
-    display:flex;
-    align-items:baseline;
-    justify-content:space-between;
-    margin-bottom:16px;
-    gap:12px;
-    flex-wrap:wrap;
-  }
-  .section-head h2{
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:700;
-    font-size:19px;
-    margin:0;
-  }
-  .section-head p{
-    font-size:13px;
-    color:var(--ink-muted);
-    margin:0;
-  }
+    /* ---------- PORTFOLIO ---------- */
+    .section-head{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      margin-bottom:16px;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .section-head h2{
+      font-family:'Space Grotesk',sans-serif;
+      font-weight:700;
+      font-size:19px;
+      margin:0;
+    }
+    .section-head p{
+      font-size:13px;
+      color:var(--ink-muted);
+      margin:0;
+    }
 
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    grid-auto-rows:130px;
-    gap:12px;
-  }
-  .tile{
-    position:relative;
-    border-radius:16px;
-    overflow:hidden;
-    border:1px solid var(--line);
-    text-decoration:none;
-    color:inherit;
-    display:flex;
-    align-items:flex-end;
-    transition:transform .15s ease, box-shadow .15s ease;
-  }
-  .tile:hover{
-    transform:translateY(-2px);
-    box-shadow:0 8px 20px rgba(22,24,29,0.08);
-  }
-  .tile.big{grid-column:span 2; grid-row:span 2;}
-  .tile.wide{grid-column:span 2;}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      grid-auto-rows:130px;
+      gap:12px;
+    }
 
-  .tile.wash-blue{background:var(--accent-wash);}
-  .tile.wash-coral{background:var(--coral-wash);}
-  .tile.wash-teal{background:var(--teal-wash);}
-
-  .tile-icon{
-    position:absolute;
-    top:14px;
-    left:14px;
-    width:32px;
-    height:32px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.85);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .tile-icon svg{width:14px;height:14px;}
-  .tile.wash-blue .tile-icon svg{color:var(--accent);}
-  .tile.wash-coral .tile-icon svg{color:var(--coral);}
-  .tile.wash-teal .tile-icon svg{color:var(--teal);}
-
-  .tile-caption{
-    padding:14px;
-    width:100%;
-    background:linear-gradient(to top, rgba(255,255,255,0.92), rgba(255,255,255,0));
-  }
-  .tile-caption .type{
-    display:block;
-    font-size:11px;
-    font-weight:500;
-    color:var(--ink-muted);
-    text-transform:uppercase;
-    letter-spacing:.04em;
-    margin-bottom:2px;
-  }
-  .tile-caption .title{
-    display:block;
-    font-size:14px;
-    font-weight:700;
-    font-family:'Space Grotesk',sans-serif;
-    line-height:1.25;
-  }
-
-  .tile-placeholder-hint{
-    position:absolute;
-    top:14px;
-    right:14px;
-    font-size:10px;
-    color:var(--ink-muted);
-    background:rgba(255,255,255,0.85);
-    padding:3px 8px;
-    border-radius:999px;
-  }
-
-  /* ---------- FOOTER CTA ---------- */
-  .cta{
-    margin-top:36px;
-    background:var(--ink);
-    border-radius:20px;
-    padding:32px;
-    text-align:center;
-    color:#fff;
-  }
-  .cta h2{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:21px;
-    margin:0 0 6px;
-    font-weight:700;
-  }
-  .cta p{
-    font-size:14px;
-    color:rgba(255,255,255,0.65);
-    margin:0 0 20px;
-  }
-  .cta a{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    text-decoration:none;
-    background:var(--marker);
-    color:var(--ink);
-    font-weight:700;
-    font-size:14px;
-    padding:13px 22px;
-    border-radius:999px;
-    transition:transform .15s ease;
-  }
-  .cta a:hover{transform:translateY(-1px);}
-
-  @media (max-width:640px){
-    .grid{grid-template-columns:repeat(2, 1fr);}
+    .tile{
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      text-decoration:none;
+      color:inherit;
+      display:flex;
+      align-items:flex-end;
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .tile:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(22,24,29,0.08);
+    }
     .tile.big{grid-column:span 2; grid-row:span 2;}
     .tile.wide{grid-column:span 2;}
-    .hero{padding:24px;}
-  }
-</style>
+
+    .tile.wash-blue{background:var(--accent-wash);}
+    .tile.wash-coral{background:var(--coral-wash);}
+    .tile.wash-teal{background:var(--teal-wash);}
+
+    .tile-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .tile-icon{
+      position:absolute;
+      top:14px;
+      left:14px;
+      width:32px;
+      height:32px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.85);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index: 3;
+    }
+    .tile-icon svg{width:14px;height:14px;}
+    .tile.wash-blue .tile-icon svg{color:var(--accent);}
+    .tile.wash-coral .tile-icon svg{color:var(--coral);}
+    .tile.wash-teal .tile-icon svg{color:var(--teal);}
+
+    .tile-caption{
+      padding:14px;
+      width:100%;
+      background:linear-gradient(to top, rgba(22,24,29,0.85), rgba(22,24,29,0));
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+    .tile-caption .type{
+      display:block;
+      font-size:11px;
+      font-weight:500;
+      color:rgba(255,255,255,0.8);
+      text-transform:uppercase;
+      letter-spacing:.04em;
+      margin-bottom:2px;
+    }
+    .tile-caption .title{
+      display:block;
+      font-size:14px;
+      font-weight:700;
+      font-family:'Space Grotesk',sans-serif;
+      line-height:1.25;
+    }
+
+    .tile-placeholder-hint{
+      position:absolute;
+      top:14px;
+      right:14px;
+      font-size:10px;
+      color:var(--ink-muted);
+      background:rgba(255,255,255,0.85);
+      padding:3px 8px;
+      border-radius:999px;
+    }
+
+    /* ---------- FOOTER CTA ---------- */
+    .cta{
+      margin-top:36px;
+      background:var(--ink);
+      border-radius:20px;
+      padding:32px;
+      text-align:center;
+      color:#fff;
+    }
+    .cta h2{
+      font-family:'Space Grotesk',sans-serif;
+      font-size:21px;
+      margin:0 0 6px;
+      font-weight:700;
+    }
+    .cta p{
+      font-size:14px;
+      color:rgba(255,255,255,0.65);
+      margin:0 0 20px;
+    }
+    .cta a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      text-decoration:none;
+      background:var(--marker);
+      color:var(--ink);
+      font-weight:700;
+      font-size:14px;
+      padding:13px 22px;
+      border-radius:999px;
+      transition:transform .15s ease;
+    }
+    .cta a:hover{transform:translateY(-1px);}
+
+    /* ===== СТИЛИ МОДАЛЬНОГО ОКНА ===== */
+    .project-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(22,24,29,0.9);
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 40px 20px;
+    }
+    .project-modal:target {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .modal-content {
+      background: #fff;
+      max-width: 500px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 20px;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .close-modal {
+      position: absolute;
+      top: 15px; right: 15px;
+      width: 30px; height: 30px;
+      background: #f0f0f5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+    }
+    .close-modal:hover { background: #e0e0e5; }
+    .modal-content h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      margin: 0 0 20px;
+    }
+
+    /* ===== СЛАЙДЕР ВНУТРИ ОКНА ===== */
+    .modal-carousel {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: #f0f0f5;
+    }
+
+    .modal-carousel input { display: none; }
+
+    .modal-carousel .slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .modal-carousel .slide {
+      display: none;
+      position: absolute;
+      inset: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #labbra-1:checked ~ .slides .slide-1,
+    #labbra-2:checked ~ .slides .slide-2,
+    #labbra-3:checked ~ .slides .slide-3 {
+      display: flex;
+    }
+
+    .modal-carousel .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Стили для стрелок */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 5;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: background 0.2s ease;
+    }
+
+    .arrow:hover { background: #fff; }
+    .arrow-left { left: 10px; }
+    .arrow-right { right: 10px; }
+
+    /* ЛОГИКА ПОКАЗА СТРЕЛОК (Уникальные классы) */
+    #labbra-1:checked ~ .arrow-next-1 { display: flex; }
+
+    #labbra-2:checked ~ .arrow-prev-1,
+    #labbra-2:checked ~ .arrow-next-2 { display: flex; }
+
+    #labbra-3:checked ~ .arrow-prev-2 { display: flex; }
+
+    .separate-photo {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+    .separate-title {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    @media (max-width:640px){
+      .grid{grid-template-columns:repeat(2, 1fr);}
+      .tile.big{grid-column:span 2; grid-row:span 2;}
+      .tile.wide{grid-column:span 2;}
+      .hero{padding:24px;}
+      .modal-content{padding:20px;}
+      .modal-carousel{height: 400px;}
+    }
+  </style>
 </head>
 <body>
 
@@ -290,7 +437,7 @@
   <header class="hero">
     <div class="hero-top">
       <div class="id">
-        <img src="https://raw.githubusercontent.com/alexrddl/xeniasmm/main/portfolio/avatar.jpg" alt="Ксения Шлепотина" class="avatar">
+        <img src="portfolio/avatar.jpg" alt="Ксения Шлепотина" class="avatar">
         <div>
           <h1>Ксения <span>Шлепотина</span></h1>
           <p class="role">SMM-специалист · соцсети, реклама, контент</p>
@@ -316,7 +463,7 @@
         </svg>
         VK
       </a>
-      <a href="mailto:name@example.com" target="_blank" rel="noopener noreferrer">
+      <a href="mailto:Shlepotina05@mail.ru" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6 8 7 8-7"/></svg>
         E-mail
       </a>
@@ -324,7 +471,7 @@
   </header>
 
   <!-- ===== ПОРТФОЛИО ===== -->
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <div class="section-head">
       <h2>Избранные работы</h2>
       <p>Кликабельно — ведёт на реальный пост, ролик или кейс</p>
@@ -332,14 +479,14 @@
 
     <div class="grid">
 
-      <a href="pportfolio/visualForCharuel/videoCharuel.mov" target="_blank" class="tile big wash-blue">
-        <span class="tile-placeholder-hint">заменить на фото/видео</span>
+      <a href="#project-labbra" class="tile big wash-blue">
+        <img src="portfolio/LabbraAutumn2026/labbra.JPG" class="tile-bg">
         <span class="tile-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
         </span>
         <span class="tile-caption">
-          <span class="type">Видео</span>
-          <span class="title">Визуал для бренда Charuel</span>
+          <span class="type">Проект</span>
+          <span class="title">Labbra — коллекция весна 2026</span>
         </span>
       </a>
 
@@ -376,28 +523,6 @@
         </span>
       </a>
 
-      <a href="#" class="tile wash-coral">
-        <span class="tile-placeholder-hint">видео</span>
-        <span class="tile-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </span>
-        <span class="tile-caption">
-          <span class="type">YouTube Shorts</span>
-          <span class="title">Серия коротких роликов</span>
-        </span>
-      </a>
-
-      <a href="#" class="tile wash-teal">
-        <span class="tile-placeholder-hint">фото</span>
-        <span class="tile-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5-9 9"/></svg>
-        </span>
-        <span class="tile-caption">
-          <span class="type">Таргет</span>
-          <span class="title">Рекламная кампания</span>
-        </span>
-      </a>
-
     </div>
   </section>
 
@@ -405,12 +530,45 @@
   <div class="cta">
     <h2>Обсудим проект?</h2>
     <p>Отвечаю в течение дня</p>
-    <a href="https://t.me/@ksushkahelp">
+    <a href="https://t.me/ksushkahelp" target="_blank" rel="noopener noreferrer">
       Написать в Telegram
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
   </div>
 
+</div>
+
+<!-- ============================================== -->
+<!-- ===== МОДАЛЬНОЕ ОКНО ПРОЕКТА LABBRA ===== -->
+<!-- ============================================== -->
+<div class="project-modal" id="project-labbra">
+  <div class="modal-content">
+    <a href="#portfolio" class="close-modal">×</a>
+    <h2>Labbra — коллекция весна 2026</h2>
+
+    <div class="modal-carousel">
+      <input type="radio" name="labbra-slider" id="labbra-1" checked>
+      <input type="radio" name="labbra-slider" id="labbra-2">
+      <input type="radio" name="labbra-slider" id="labbra-3">
+
+      <div class="slides">
+        <div class="slide slide-1"><img src="portfolio/LabbraAutumn2026/IMG_1.png" onerror="this.src='https://placehold.co/400x533?text=Ошибка+пути+к+IMG_1.png'" alt="Фото 1"></div>
+        <div class="slide slide-2"><img src="portfolio/LabbraAutumn2026/IMG_2.png" onerror="this.src='https://placehold.co/400x533?text=Ошибка+пути+к+IMG_2.png'" alt="Фото 2"></div>
+        <div class="slide slide-3"><img src="portfolio/LabbraAutumn2026/IMG_3.png" onerror="this.src='https://placehold.co/400x533?text=Ошибка+пути+к+IMG_3.png'" alt="Фото 3"></div>
+      </div>
+
+      <!-- Уникальные стрелки -->
+      <label for="labbra-2" class="arrow arrow-right arrow-next-1">›</label>
+
+      <label for="labbra-1" class="arrow arrow-left arrow-prev-1">‹</label>
+      <label for="labbra-3" class="arrow arrow-right arrow-next-2">›</label>
+
+      <label for="labbra-2" class="arrow arrow-left arrow-prev-2">‹</label>
+    </div>
+
+    <div class="separate-title">Оформление</div>
+    <img class="separate-photo" src="portfolio/LabbraAutumn2026/IMG_4.png" onerror="this.src='https://placehold.co/400x533?text=Ошибка+пути+к+IMG_4.png'" alt="Отдельное фото Labbra">
+  </div>
 </div>
 
 </body>
