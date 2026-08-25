@@ -184,6 +184,7 @@
     .tile.wash-coral{background:var(--coral-wash);}
     .tile.wash-teal{background:var(--teal-wash);}
 
+    /* Стили для фоновой картинки плитки */
     .tile-bg {
       position: absolute;
       top: 0;
@@ -338,11 +339,19 @@
     .modal-carousel {
       position: relative;
       width: 100%;
-      height: 500px;
+      /* Автоматическая высота пропорционально ширине (формат 4:5) */
+      aspect-ratio: 4 / 5;
       border-radius: 12px;
       overflow: hidden;
       margin-bottom: 20px;
       background: #f0f0f5;
+    }
+
+    .modal-carousel .slide img {
+      width: 100%;
+      height: 100%;
+      /* Cover заполняет всю рамку, аккуратно обрезая лишнее (без квадратов) */
+      object-fit: cover;
     }
 
     .modal-carousel input { display: none; }
@@ -367,13 +376,18 @@
       display: flex;
     }
 
+    #charuel-1:checked ~ .slides .slide-1,
+    #charuel-2:checked ~ .slides .slide-2,
+    #charuel-3:checked ~ .slides .slide-3 {
+      display: flex;
+    }
+
     .modal-carousel .slide img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
 
-    /* Стили для стрелок */
     .arrow {
       position: absolute;
       top: 50%;
@@ -394,18 +408,19 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       transition: background 0.2s ease;
     }
-
     .arrow:hover { background: #fff; }
     .arrow-left { left: 10px; }
     .arrow-right { right: 10px; }
 
-    /* ЛОГИКА ПОКАЗА СТРЕЛОК (Уникальные классы) */
     #labbra-1:checked ~ .arrow-next-1 { display: flex; }
-
     #labbra-2:checked ~ .arrow-prev-1,
     #labbra-2:checked ~ .arrow-next-2 { display: flex; }
-
     #labbra-3:checked ~ .arrow-prev-2 { display: flex; }
+
+    #charuel-1:checked ~ .arrow-next-1 { display: flex; }
+    #charuel-2:checked ~ .arrow-prev-1,
+    #charuel-2:checked ~ .arrow-next-2 { display: flex; }
+    #charuel-3:checked ~ .arrow-prev-2 { display: flex; }
 
     .separate-photo {
       width: 100%;
@@ -479,6 +494,7 @@
 
     <div class="grid">
 
+      <!-- ПРОЕКТ LABBRA -->
       <a href="#project-labbra" class="tile big wash-blue">
         <img src="portfolio/LabbraAutumn2026/labbra_5.jpg" class="tile-bg">
         <span class="tile-icon">
@@ -490,6 +506,19 @@
         </span>
       </a>
 
+      <!-- ПРОЕКТ CHARUEL -->
+      <a href="#project-charuel" class="tile big wash-teal">
+        <img src="portfolio/visualForCharuel/charuel_4.jpg" class="tile-bg">
+        <span class="tile-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/></svg>
+        </span>
+        <span class="tile-caption">
+          <span class="type">Проект</span>
+          <span class="title">Визуал для Charuel</span>
+        </span>
+      </a>
+
+      <!-- Остальные работы -->
       <a href="#" class="tile wash-coral">
         <span class="tile-placeholder-hint">фото</span>
         <span class="tile-icon">
@@ -557,17 +586,44 @@
         <div class="slide slide-3"><img src="portfolio/LabbraAutumn2026/IMG_3.png" onerror="this.src='https://placehold.co/400x533?text=Ошибка+пути+к+IMG_3.png'" alt="Фото 3"></div>
       </div>
 
-      <!-- Уникальные стрелки -->
       <label for="labbra-2" class="arrow arrow-right arrow-next-1">›</label>
-
       <label for="labbra-1" class="arrow arrow-left arrow-prev-1">‹</label>
       <label for="labbra-3" class="arrow arrow-right arrow-next-2">›</label>
-
       <label for="labbra-2" class="arrow arrow-left arrow-prev-2">‹</label>
     </div>
 
     <div class="separate-title">Оформление</div>
     <img class="separate-photo" src="portfolio/LabbraAutumn2026/IMG_4.png" onerror="this.src='https://placehold.co/400x533?text=Ошибка+пути+к+IMG_4.png'" alt="Отдельное фото Labbra">
+  </div>
+</div>
+
+<!-- ============================================== -->
+<!-- ===== МОДАЛЬНОЕ ОКНО ПРОЕКТА CHARUEL ===== -->
+<!-- ============================================== -->
+<div class="project-modal" id="project-charuel">
+  <div class="modal-content">
+    <a href="#portfolio" class="close-modal">×</a>
+    <h2>Визуал для Charuel</h2>
+
+    <div class="modal-carousel">
+      <input type="radio" name="charuel-slider" id="charuel-1" checked>
+      <input type="radio" name="charuel-slider" id="charuel-2">
+      <input type="radio" name="charuel-slider" id="charuel-3">
+
+      <div class="slides">
+        <div class="slide slide-1"><img src="portfolio/visualForCharuel/IMG_1.JPG" onerror="this.src='https://placehold.co/400x533?text=Ошибка+пути+к+photo1.png'" alt="Фото 1"></div>
+        <div class="slide slide-2"><img src="portfolio/visualForCharuel/IMG_2.JPG" onerror="this.src='https://placehold.co/400x533?text=Ошибка+пути+к+photo2.png'" alt="Фото 2"></div>
+        <div class="slide slide-3"><img src="portfolio/visualForCharuel/IMG_3.JPG" onerror="this.src='https://placehold.co/400x533?text=Ошибка+пути+к+photo3.png'" alt="Фото 3"></div>
+      </div>
+
+      <label for="charuel-2" class="arrow arrow-right arrow-next-1">›</label>
+      <label for="charuel-1" class="arrow arrow-left arrow-prev-1">‹</label>
+      <label for="charuel-3" class="arrow arrow-right arrow-next-2">›</label>
+      <label for="charuel-2" class="arrow arrow-left arrow-prev-2">‹</label>
+    </div>
+
+    <div class="separate-title">Видео</div>
+    <video class="separate-photo" src="portfolio/visualForCharuel/videoCharuel.mp4" controls playsinline></video>
   </div>
 </div>
 
